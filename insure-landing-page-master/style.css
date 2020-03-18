@@ -66,6 +66,8 @@ nav {
 }
 /* Header */
 .heading-img {
+  background-image: url(./images/image-intro-mobile.jpg);
+  /* position: ; */
   height: 100%;
   width: 100%;
 }
@@ -82,8 +84,6 @@ nav {
 }
 .intro-left {
   position: absolute;
-  left: 0px;
-  top: 0px;
 }
 .intro-right {
   position: absolute;
@@ -193,6 +193,48 @@ button {
 /* Media queries */
 /* Desktop */
 @media only screen and (min-width: 992px) {
+  .header {
+    text-align: left;
+    margin-top: 0.5rem;
+    height: 70vh;
+  }
+  .heading-img {
+    background-image: url(./images/image-intro-desktop.jpg);
+    height: 65%;
+    width: 32%;
+    margin-top: 8%;
+    margin-left: 58%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .heading-writeup {
+    margin-left: 10%;
+    margin-right: 41%;
+    margin-top: 7%;
+  }
+  .heading-writeup > h1 {
+    font-size: 61px;
+  }
+
+  /* .header-container {
+    height: 70vh;
+  } */
+  .intro-right {
+    background-image: url(./images/bg-pattern-intro-right-desktop.svg);
+    height: 100%;
+    width: 26%;
+    z-index: 2;
+    top: 0;
+    right: 0;
+  }
+  .intro-left {
+    background-image: url(./images/bg-pattern-intro-left-desktop.svg);
+    top: 62%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
   /* About */
   .about {
     display: grid;
@@ -203,6 +245,7 @@ button {
   .about-heading {
     text-align: left;
     margin-left: 7rem;
+    margin-top: 15rem;
   }
   .about-heading > hr {
     margin-left: 0%;
@@ -218,24 +261,33 @@ button {
     margin: 0 7rem 0 7rem;
   }
   .banner-top {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: inline;
+    position: relative;
   }
   .banner-top > h4 {
+    position: absolute;
+    text-align: left;
+    margin-top: 3rem;
+    margin-left: 5rem;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
   }
   .banner-top > button {
-    margin-left: 28.5rem;
-    margin-right: 2.7rem;
-    margin-top: 13%;
+    margin-left: 54rem;
+    margin-top: 5rem;
   }
   .banner-svg {
+    position: absolute;
     background-image: url(./images/bg-pattern-how-we-work-desktop.svg);
     height: 100%;
     width: 100%;
     top: 0;
-    margin-left: 15.9rem;
+    margin-left: 42.9rem;
   }
   /* Footer */
+  footer {
+    margin-top: 8rem;
+  }
   footer hr {
     margin: 0 7rem 0 7rem;
   }
@@ -265,10 +317,30 @@ button {
 
 /* Mobile */
 @media only screen and (max-width: 600px) {
+  /* Heading */
+  .heading-img {
+    display: inline-block;
+    position: relative;
+    background: url(./images/image-intro-mobile.jpg);
+    height: 100%;
+    width: 100%;
+  }
+  .intro-right {
+    background-image: url(./images/bg-pattern-intro-right-mobile.svg);
+    height: 100%;
+    width: 29.4%;
+  }
+  .intro-left {
+    background-image: url(./images/bg-pattern-intro-left-mobile.svg);
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+  }
   .footer-svg {
     background-image: url(./images/bg-pattern-footer-mobile.svg);
-    /* height: 100%; */
-    /* width: 80%; */
+    height: 100%;
+    width: 100%;
   }
   .banner-svg {
     background-image: url(./images/bg-pattern-how-we-work-mobile.svg);
