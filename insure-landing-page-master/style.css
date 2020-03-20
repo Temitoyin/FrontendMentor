@@ -51,19 +51,35 @@ body {
 }
 /* Navigation */
 nav {
+  display: inline;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem 2rem 0 2rem;
+}
+.nav-links > ul {
+  margin-left: 10rem;
+}
+.nav-links > ul > li {
+  display: inline;
+  padding: 7px;
+  margin-right: 0.875rem;
+  color: hsl(273, 4%, 51%);
+}
+.nav-links > ul > li:hover {
+  border: solid black 1px;
+  text-align: center;
+  color: black;
 }
 .nav-heading > p {
   margin-top: 5px;
   text-transform: uppercase;
   font-size: 19px;
   font-weight: 700;
+  margin-left: 5rem;
 }
-.float-left {
+/* .float-left {
   float: right;
-}
+} */
 /* Header */
 .heading-img {
   background-image: url(./images/image-intro-mobile.jpg);
@@ -126,10 +142,7 @@ nav {
   color: white;
 }
 .banner-svg {
-  /* background-image: url(./images/bg-pattern-how-we-work-mobile.svg); */
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
 }
 .banner > button {
   margin-top: 1.5rem;
@@ -193,6 +206,12 @@ button {
 /* Media queries */
 /* Desktop */
 @media only screen and (min-width: 992px) {
+  .nav-hamburger {
+    display: none;
+  }
+  .nav-heading > p {
+    margin-top: 14px;
+  }
   .header {
     text-align: left;
     margin-top: 0.5rem;
@@ -209,17 +228,13 @@ button {
   }
 
   .heading-writeup {
-    margin-left: 10%;
-    margin-right: 41%;
+    margin-left: 5rem;
+    margin-right: 43%;
     margin-top: 7%;
   }
   .heading-writeup > h1 {
     font-size: 61px;
   }
-
-  /* .header-container {
-    height: 70vh;
-  } */
   .intro-right {
     background-image: url(./images/bg-pattern-intro-right-desktop.svg);
     height: 100%;
@@ -269,8 +284,6 @@ button {
     text-align: left;
     margin-top: 3rem;
     margin-left: 5rem;
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr); */
   }
   .banner-top > button {
     margin-left: 54rem;
@@ -282,7 +295,7 @@ button {
     height: 100%;
     width: 100%;
     top: 0;
-    margin-left: 42.9rem;
+    margin-left: 50.5rem;
   }
   /* Footer */
   footer {
@@ -300,7 +313,6 @@ button {
     margin: 0 7rem 0 7rem;
     grid-template-columns: repeat(4, 1fr);
     text-align: left;
-    /* grid-template-rows: none; */
   }
   .footer-top {
     margin: 0 7rem 0 7rem;
@@ -317,6 +329,16 @@ button {
 
 /* Mobile */
 @media only screen and (max-width: 600px) {
+  /* Navigation */
+  nav {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .nav-hamburger {
+    margin-left: 8rem;
+  }
+  .nav-heading > p {
+    margin-left: 0rem;
+  }
   /* Heading */
   .heading-img {
     display: inline-block;
@@ -352,5 +374,23 @@ button {
   .about {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+  }
+  .nav-links > ul {
+    display: none;
+  }
+
+  .mobile-links > ul {
+    margin-left: 10rem;
+  }
+  .mobile-links > ul > li {
+    /* display: inline; */
+    padding: 7px;
+    margin-right: 0.875rem;
+    color: hsl(273, 4%, 51%);
+  }
+  .mobile-links > ul > li:hover {
+    border: solid black 1px;
+    text-align: center;
+    color: black;
   }
 }

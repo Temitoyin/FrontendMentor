@@ -20,18 +20,20 @@
       <div class="nav-heading">
         <p>insure</p>
       </div>
-      <div class="nav-hamburger">
-        <img class="float-left" src="./images/icon-hamburger.svg" alt="" />
+      <div class="nav-hamburger" id="hamburger">
+        <img class="" src="./images/icon-hamburger.svg" alt="" />
       </div>
-      <!-- <ul>
-        <li>How we work</li>
-        <li>Blog</li>
-        <li>Account</li>
-        <li>View plans</li>
-      </ul> -->
+      <div class="nav-links mobile-links">
+        <ul>
+          <li>How we work</li>
+          <li>Blog</li>
+          <li>Account</li>
+          <li>View plans</li>
+        </ul>
+      </div>
     </nav>
     <!-- <div class="heading-img"></div> -->
-    <img class="heading-img" src="./images/image-intro-mobile.jpg" alt="" />
+    <img class="heading-img" src="" alt="" />
     <div class="header">
       <div class="header-container">
         <img class="intro-left" src="" alt="" />
@@ -153,5 +155,10 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Temitoyin</a>.
     </div>
+
+    <script>
+      var ham = document.getElementById("hamburger");
+      ham.onclick.classList.add("mobile-links");
+    </script>
   </body>
 </html>
